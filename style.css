@@ -1,0 +1,111 @@
+html,body{margin: 0 auto; font-family: 'sitka Heading'; overflow: auto;}
+h1{color:rgb(222, 255, 145);}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 10px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.flex-container > header,footer {
+    padding: 5px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+    min-height: 85%;
+    max-height: 85%;
+    color: white;
+    overflow: auto;
+    border: 0px;
+       
+}
+::-webkit-scrollbar {
+    width: 8px;
+} 
+::-webkit-scrollbar-track {
+    background-color: #eee0e0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 72, 97, 0.705); 
+}
+.articlecontainer{width:100%;}
+.articlecontainer b{font-size: larger;}
+.articlecontainer i{font-size: small;}
+
+header {color:white; border-bottom: solid 2px silver; float: left;}
+header span{font-size: 30px; padding-left: 10px;}
+
+.nav {color:white; overflow: auto;}
+.socialmedia{ opacity: 0.7;}
+.socialmedia:hover{ opacity: 1;}
+.nav ul {
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+    width:95%;
+}
+.nav ul li {
+    border: solid 1px rgb(206, 219, 209);
+    padding: 2px;
+    margin-top: 8px;
+    box-shadow: 3px 3px 5px rgb(21, 120, 201);
+    border-radius: 10px;
+    background-color: ButtonFace;
+    
+}
+.nav ul li:hover{
+        background: #7c7e80;
+        color: rgb(255, 255, 255);   
+        cursor: hand;
+}
+.nav ul li span {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);  
+}
+.socialmedia{width:35px;}
+.aboutmeimg{ max-width: 200px; border-radius: 150px; border:solid 2px silver;}
+#projects{margin-left:10px;}
+#projects h3{color:rgb(222, 255, 145);}
+#projects p{margin-top:-20px;}
+.skills{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    list-style-position: inside;
+}
+.ide{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    list-style-position: inside;
+}
+@media all and (min-width: 768px) {
+    .skills{
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+    .ide{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1; overflow: auto;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2; border-left: 2px solid silver;}
+    .socialmedia{width:40px;}
+    .articlecontainer ul li{margin-top: 10px;}
+    .aboutmeimgdiv{max-height: 400px; width: auto;}
+    .nav ul li {padding: 5px;}
+    header span{font-size: 50px; padding-left: 10px;}
+}
